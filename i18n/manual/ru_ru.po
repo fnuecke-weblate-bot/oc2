@@ -6,10 +6,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-11-22 19:02+0000\n"
+"Last-Translator: loki <lolpop334gg@gmail.com>\n"
+"Language-Team: Russian <https://weblate.h.cil.li/projects/oc2/manual/ru/>\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: basics.md
 msgid "Basics"
-msgstr ""
+msgstr "Основы"
 
 #: basics.md
 msgid ""
@@ -17,50 +23,60 @@ msgid ""
 "processors and operating systems there are, and how software talks to "
 "devices. For step-by-step instructions, see the [getting started guide]({2})."
 msgstr ""
+"Эта статья описывает общие принципы работы [компьютеров]({1}): какие бывают "
+"процессоры и операционные системы и как программы взаимодействуют с "
+"устройствами. Пошаговые инструкции смотрите в [руководстве по началу работы]("
+"{2})."
 
 #: basics.md
 msgid "Architectures"
-msgstr ""
+msgstr "Архитектуры"
 
 #: basics.md
 msgid "Computers need a processor (CPU) to run. There are two architectures:"
 msgstr ""
+"Для работы компьютеру нужен процессор (CPU). Существует две архитектуры:"
 
 #: basics.md
 msgid "[RISC-V]({1}), a 64-bit processor. It runs OpenOS II and Linux."
-msgstr ""
+msgstr "[RISC-V]({1}), 64-битный процессор. На нём работают OpenOS II и Linux."
 
 #: basics.md
 msgid ""
 "[Z80]({1}), an 8-bit processor. It runs CP/M. It is cheaper, but much more "
 "limited."
 msgstr ""
+"[Z80]({1}), 8-битный процессор. На нём работает CP/M. Он дешевле, но заметно "
+"ограничен."
 
 #: basics.md
 msgid "Operating Systems"
-msgstr ""
+msgstr "Операционные системы"
 
 #: basics.md
 msgid "Three operating systems (OS) are supplied:"
-msgstr ""
+msgstr "В комплекте поставляются три операционные системы (ОС):"
 
 #: basics.md
 msgid "[OpenOS II]({1}), a small OS with a shell and programs written in Lua."
-msgstr ""
+msgstr "[OpenOS II]({1}), небольшая ОС с оболочкой и программами на Lua."
 
 #: basics.md
 msgid ""
 "[Linux]({1}), a small Linux distribution with common command line tools, "
 "Lua, MicroPython and a C compiler."
 msgstr ""
+"[Linux]({1}), небольшой дистрибутив Linux с набором стандартных утилит "
+"командной строки, Lua, MicroPython и компилятором C."
 
 #: basics.md
 msgid "[CP/M]({1}), CP/M 2.2 with an assembler, a linker and a line editor."
 msgstr ""
+"[CP/M]({1}), CP/M 2.2 с ассемблером, компоновщиком и строчным редактором."
 
 #: basics.md
 msgid "Native Devices"
-msgstr ""
+msgstr "Нативные устройства"
 
 #: basics.md
 msgid ""
@@ -70,6 +86,11 @@ msgid ""
 "are [hard drives]({1}), the [network interface card]({2}) and the [sound "
 "card]({3})."
 msgstr ""
+"Нативные устройства на RISC-V отображаются в память (memory-mapped), а на "
+"Z80 на порты ввода-вывода (port-mapped). Это значит, что они привязаны к "
+"некоторой области физической памяти или к отдельному порту устройства. ОС "
+"работает с ними через собственные драйверы. Примеры: [жёсткие диски]({1}), "
+"[сетевая карта]({2}) и [звуковая карта]({3})."
 
 #: basics.md
 msgid ""
@@ -77,6 +98,9 @@ msgid ""
 "only have one face that connects to the bus, usually their back or bottom "
 "side."
 msgstr ""
+"Нативное устройство в каждый момент времени может использоваться только "
+"одним компьютером, поэтому у блочных устройств к шине подключается только "
+"одна грань, обычно задняя или нижняя."
 
 #: basics.md
 msgid ""
@@ -88,28 +112,37 @@ msgid ""
 "must be rebooted when changes to native devices are made. Devices for which "
 "this is the case will typically have a corresponding note in their tooltip."
 msgstr ""
+"О том, какие устройства доступны и где они находятся, программе на "
+"компьютере сообщает плоское дерево устройств (flattened device tree) на RISC-"
+"V и окно перечисления на Z80. В дереве устройств также хранится размер "
+"установленной [памяти]({1}). Эта структура данных копируется при загрузке, "
+"поэтому позже обновить её нельзя. Из-за этого компьютер нужно перезагружать "
+"после любых изменений нативных устройств. У таких устройств в подсказке "
+"обычно есть соответствующая пометка."
 
 #: basics.md
 msgid "Native devices are supported by:"
-msgstr ""
+msgstr "Нативные устройства поддерживают:"
 
 #: basics.md
 msgid ""
 "OpenOS II, all native devices except the network interface card and network "
 "tunnel devices."
 msgstr ""
+"OpenOS II, все нативные устройства, кроме сетевой карты и сетевых туннельных "
+"устройств."
 
 #: basics.md
 msgid "Linux, all native devices."
-msgstr ""
+msgstr "Linux, все нативные устройства."
 
 #: basics.md
 msgid "CP/M, disk drives and serial interface cards."
-msgstr ""
+msgstr "CP/M, дисководы и платы последовательного интерфейса."
 
 #: basics.md
 msgid "HLAPI and MLAPI Devices"
-msgstr ""
+msgstr "Устройства HLAPI и MLAPI"
 
 #: basics.md
 msgid ""
@@ -120,6 +153,12 @@ msgid ""
 "native devices, these devices can be added and removed while the computer is "
 "running."
 msgstr ""
+"Большинство устройств относятся к высокоуровневому API ([HLAPI]({1})) или "
+"среднеуровневому API ([MLAPI]({2})), например [красный интерфейс]({3}). Все "
+"они используют один общий контроллер, который есть в каждом компьютере. "
+"Контроллер собирает сообщения от устройств и передаёт им сообщения. В "
+"отличие от нативных, эти устройства можно подключать и отключать, пока "
+"компьютер работает."
 
 #: basics.md
 msgid ""
@@ -127,16 +166,19 @@ msgid ""
 "methods by name, and the `devices` Lua library takes care of the protocol. "
 "It is supported by:"
 msgstr ""
+"HLAPI использует JSON-сообщения через последовательное устройство. Программы "
+"вызывают методы устройств по имени, а протоколом занимается библиотека Lua "
+"`devices`. Поддерживается в:"
 
 #: basics.md block/disk_drive.md block/keyboard.md block/terminal.md
 #: item/serial_interface_card.md item/sound_card.md systems/openos2.md
 msgid "OpenOS II"
-msgstr ""
+msgstr "OpenOS II"
 
 #: basics.md block/disk_drive.md block/keyboard.md block/terminal.md
 #: item/serial_interface_card.md item/sound_card.md systems/linux.md
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: basics.md
 msgid ""
@@ -145,14 +187,18 @@ msgid ""
 "arguments and results are plain bytes. Most HLAPI devices also offer the "
 "MLAPI. It is supported by:"
 msgstr ""
+"MLAPI использует двоичный протокол на основе регистров: на Z80 через порт "
+"ввода-вывода, на RISC-V через страницу памяти. Программы выбирают функцию по "
+"номеру, а её аргументы и результаты передаются как обычные байты. "
+"Большинство устройств HLAPI также поддерживают MLAPI. Поддерживается в:"
 
 #: basics.md
 msgid "CP/M, using the `OCAPI.INC` library"
-msgstr ""
+msgstr "CP/M, через библиотеку `OCAPI.INC`"
 
 #: basics.md
 msgid "Linux, using the `mlapi.h` C header"
-msgstr ""
+msgstr "Linux, через заголовочный файл C `mlapi.h`"
 
 #: basics.md
 msgid ""
@@ -160,6 +206,9 @@ msgid ""
 "Most devices therefore only provide comparatively simple APIs which do not "
 "require sending large amounts of data either way."
 msgstr ""
+"Из-за особенностей используемых протоколов скорость передачи данных довольно "
+"низкая. Поэтому большинство устройств предоставляют сравнительно простые "
+"API, которым не нужно передавать большие объёмы данных ни в одну из сторон."
 
 #: basics.md block/computer.md robotics.md
 #, fuzzy
@@ -171,6 +220,8 @@ msgid ""
 "Most components contribute to the overall energy consumption of a computer. "
 "To conserve energy, being deliberate bout the components used is essential."
 msgstr ""
+"Большинство компонентов увеличивают общее энергопотребление компьютера. "
+"Чтобы экономить энергию, стоит с умом подбирать компоненты."
 
 #: block/bus_cable.md
 #, fuzzy
@@ -183,45 +234,38 @@ msgid "![Party Bus]({1})"
 msgstr "![Внутри бегают байтики]({1})"
 
 #: block/bus_cable.md
-#, fuzzy
 msgid "The bus cable connects [bus interfaces]({1}) to a computer."
-msgstr ""
-"Интерфейсный кабель соединяет [интерфейсные шины]({1}) других устройств с "
-"интерфейсной шиной компьютера."
+msgstr "Интерфейсный кабель соединяет [интерфейсные шины]({1}) с компьютером."
 
 #: block/bus_cable.md
-#, fuzzy
 msgid ""
 "Placed cables may be hidden by placing any regular decorative block on them. "
 "Remove a facade block by using a [wrench]({1}) on it."
 msgstr ""
-"Кабели могут быть замаскированы, если кликнуть по ним любым декоративным "
-"блоком. Удаление блока производится [ключом]({1})."
+"Установленные кабели можно скрыть, поставив на них любой обычный "
+"декоративный блок. Чтобы убрать фасадный блок, воспользуйтесь [гаечным "
+"ключом]({1})."
 
 #: block/bus_interface.md
-#, fuzzy
 msgid "Bus Interface"
 msgstr "Интерфейсная шина"
 
 #: block/bus_interface.md
-#, fuzzy
 msgid "![Plug and play]({1})"
-msgstr "![Plug and play]({1})"
+msgstr "![Подключи и работай]({1})"
 
 #: block/bus_interface.md
-#, fuzzy
 msgid ""
 "Bus interfaces connect external devices to [computers]({1}). This includes "
 "explicit device blocks, such as the [redstone interface]({2}). Some generic "
 "functionality blocks of blocks is also available, such as information on "
 "energy storage."
 msgstr ""
-"Интерфейсные шины позволяют соединять внешние устройства с [компьютерами]"
-"({1}). Помимо компьютеров, шина присоединяется и к блокам-устройствам, вроде "
-"[красного интерфейса]({2})."
+"Интерфейсные шины подключают внешние устройства к [компьютерам]({1}). Сюда "
+"входят отдельные блоки устройств, например [красный интерфейс]({2}). Также "
+"есть универсальные блоки, например для получения сведений о запасе энергии."
 
 #: block/bus_interface.md
-#, fuzzy
 msgid ""
 "It is possible to configure an explicit name for a bus interface using a "
 "[wrench]({1}). This is useful when attaching multiple devices of the same "
@@ -232,32 +276,38 @@ msgid ""
 "both label and type name to find the desired device. Names are limited to "
 "printable ASCII characters."
 msgstr ""
-"С помощью [ключа]({1}) можно присвоить шине свое название. Это полезно, если "
-"у вас много однотипных устройств: поиск нужного можно выполнять по названию "
-"присоединенной к нему шины (`devices:find(typeName)`)."
+"Для интерфейсной шины можно задать собственное имя с помощью [гаечного ключа]"
+"({1}). Это удобно, когда к компьютеру подключено несколько устройств одного "
+"типа: при поиске устройств по имени типа (`devices:find(typeName)` в HLAPI, "
+"`OCFIND` в MLAPI) эти пользовательские имена тоже работают. В HLAPI "
+"несколько устройств на одной грани объединяются. В MLAPI этого не "
+"происходит, так как индексы методов могут совпасть. Чтобы найти нужное "
+"устройство, используйте и метку, и имя типа. Имена могут содержать только "
+"печатные символы ASCII."
 
 #: block/bus_interface.md
-#, fuzzy
 msgid ""
 "Note that [computers]({1}) must also be explicitly connected to a [bus]({2}) "
 "with a bus connector."
 msgstr ""
-"Не забывайте, что [компьютеры]({1}) подключаются к [кабелю]({2}) "
-"исключительно через шину."
+"Обратите внимание: [компьютеры]({1}) нужно отдельно подключить к [шине]({2}) "
+"через разъём шины."
 
 #: block/charger.md device/charger.md
 msgid "Charger"
-msgstr ""
+msgstr "Зарядное устройство"
 
 #: block/charger.md
 msgid "![Codename: Leeroy]({1})"
-msgstr ""
+msgstr "![Кодовое имя: Лирой]({1})"
 
 #: block/charger.md
 msgid ""
 "The charger transfers energy from a connected power source to energy "
 "consumers on top of it."
 msgstr ""
+"Зарядное устройство передаёт энергию от подключённого источника питания "
+"потребителям, расположенным сверху."
 
 #: block/charger.md
 msgid ""
@@ -265,12 +315,18 @@ msgid ""
 "accepting RF energy. In particular, blocks and entities, as well as items in "
 "regular item containers (such as blocks and entities) will be charged."
 msgstr ""
+"Используемый механизм беспроводной передачи энергии подходит для любого "
+"потребителя, принимающего энергию RF. В частности, будут заряжаться блоки и "
+"сущности, а также предметы в обычных контейнерах (например, в блоках и "
+"сущностях)."
 
 #: block/charger.md
 msgid ""
 "This device is particularly useful to recharge [robots]({1}) or energy "
 "consuming devices in your inventory."
 msgstr ""
+"Это устройство особенно удобно для подзарядки [роботов]({1}) и других "
+"энергопотребляющих устройств в вашем инвентаре."
 
 #: block/charger.md block/redstone_interface.md block/transposer.md
 #: item/block_operations_module.md item/crafting_module.md
@@ -278,7 +334,7 @@ msgstr ""
 #: item/redstone_interface_card.md item/robot.md item/scanner_module.md
 #: item/serial_interface_card.md item/tank_operations_module.md
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: block/charger.md
 msgid ""
